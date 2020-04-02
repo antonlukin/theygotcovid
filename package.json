@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "debug": "~4.1.1",
+    "dotenv": "^8.2.0",
+    "ejs": "~3.0.2",
+    "express": "~4.17.1",
+    "telegraf": "^3.37.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-uglify": "^3.0.2",
+    "swiper": "^5.3.6"
+  }
+}

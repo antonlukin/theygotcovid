@@ -1,0 +1,96 @@
+.menu {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+
+  .menu-link {
+    display: block;
+    position: relative;
+    outline: none;
+
+    margin-bottom: 1rem;
+    margin-right: 2.5rem;
+    padding-top: 0.25rem;
+
+    font-size: 1rem;
+    line-height: 2.25;
+
+    &:after {
+      content: '';
+
+      position: absolute;
+      bottom: -0.125rem;
+      left: 0;
+
+      width: 0;
+      height: 0.25rem;
+      opacity: 0;
+
+      background: $color-text;
+      border-radius: 0.25rem;
+
+      transition: width 0.5s;
+    }
+
+    &:hover:after {
+      opacity: 1;
+      width: 2rem;
+    }
+
+    &:focus:after {
+      opacity: 1;
+      width: 2rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-right: 1.75rem;
+      font-size: 0.9375rem;
+    }
+
+    @media screen and (max-width: 479px) {
+      margin-right: 1.5rem;
+      font-size: 0.8125rem;
+    }
+
+    @media screen and (max-width: 359px) {
+      margin-right: 1rem;
+      font-size: 0.75rem;
+    }
+  }
+
+  .menu-current {
+    &:after {
+      opacity: 1;
+      width: 2rem;
+    }
+  }
+
+  .menu-select {
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    color: $color-background;
+    background: $color-text;
+
+    border-radius: 1.5rem;
+    transition: background 0.5s;
+
+    &:hover {
+      background: darken($color-text, 15);
+    }
+
+    &:focus {
+      background: darken($color-text, 15);
+    }
+
+    &:after {
+      display: none;
+    }
+
+    @media screen and (max-width: 479px) {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+}

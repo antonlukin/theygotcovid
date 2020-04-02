@@ -1,0 +1,99 @@
+.swiper {
+  display: block;
+  position: relative;
+
+  width: $width-site;
+  max-width: 100%;
+
+  margin: 2rem auto;
+  padding: 0 2rem;
+
+  overflow: hidden;
+
+  .swiper-slide {
+    width: 20rem;
+    max-width: 100%;
+
+    height: auto;
+  }
+
+  .swiper-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    outline: none;
+
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+
+    width: 3rem;
+    height: 3rem;
+    margin-top: -1rem;
+
+    background: $color-text;
+    border-radius: 50%;
+
+    transition: background 0.5s;
+
+    &:after {
+      content: '';
+
+      display: block;
+
+      height: 1rem;
+      width: 1rem;
+
+      border-bottom: 0.1875rem solid $color-background;
+      border-right: 0.1875rem solid $color-background;
+
+      border-radius: 0.125rem;
+    }
+
+    &:hover {
+      background: darken($color-text, 15);
+    }
+
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+  }
+
+  .swiper-next {
+    right: 0.25rem;
+
+    &:after {
+      margin-right: 0.25rem;
+      transform: rotate(-45deg);
+    }
+  }
+
+  .swiper-prev {
+    left: 0.25rem;
+
+    &:after {
+      margin-left: 0.25rem;
+      transform: rotate(135deg);
+    }
+  }
+
+  .swiper-disabled {
+    display: none;
+  }
+
+  @media screen and (max-width: 1023px) {
+    padding-right: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 1.5rem auto;
+    padding-left: 1rem;
+  }
+
+  @media screen and (max-width: 479px) {
+    margin: 1rem auto;
+    padding-left: 0.75rem;
+  }
+}

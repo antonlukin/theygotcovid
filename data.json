@@ -1,0 +1,29 @@
+[{
+    "name": "Vladimir Putin",
+    "bio": "President, Russia",
+    "link": "https://kremlin.ru",
+    "sex": "male",
+    "status": "infected",
+    "photo": "/photo/putin.png"
+}, {
+    "name": "Vladimir Putin",
+    "bio": "President, Russia",
+    "link": "https://kremlin.ru",
+    "sex": "male",
+    "status": "infected",
+    "photo": "/photo/putin.png"
+}, {
+    "name": "Vladimir Putin",
+    "bio": "President, Russia",
+    "link": "https://kremlin.ru",
+    "sex": "male",
+    "status": "infected",
+    "photo": "/photo/putin.png"
+}, {
+    "name": "Vladimir Putin",
+    "bio": "President, Russia",
+    "link": "https://kremlin.ru",
+    "sex": "male",
+    "status": "cured",
+    "photo": "/photo/putin.png"
+}]

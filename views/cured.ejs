@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<%- include('parts/header', {title: 'Cured  / Celebs with COVID-19'}) %>
+
+<body>
+    <header class="header">
+        <nav class="menu">
+            <a class="menu-link" href="/">All diagnosed</a>
+            <a class="menu-link menu-current" href="/cured/">Cured</a>
+
+            <a class="menu-link menu-select" href="/suggest/">Add new</a>
+        </nav>
+
+        <h1 class="title">Celebs with <strong>COVID-19</strong></h1>
+    </header>
+
+    <section class="swiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <% items.forEach(function(item) { %>
+                <%- include('parts/item', {item: item}); %>
+                <% }); %>
+            </div>
+        </div>
+
+        <div class="swiper-button swiper-next"></div>
+        <div class="swiper-button swiper-prev"></div>
+    </section>
+
+    <%- include('parts/footer') %>
+
+    <script src="/scripts/swiper.min.js"></script>
+    <script src="/scripts/custom.min.js"></script>
+</body>
+</html>

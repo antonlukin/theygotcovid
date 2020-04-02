@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<%- include('parts/header', {title: 'Add new / Celebs with COVID-19'}) %>
+
+<body>
+    <header class="header">
+        <nav class="menu">
+            <a class="menu-link" href="/">All diagnosed</a>
+            <a class="menu-link" href="/cured/">Cured</a>
+
+            <a class="menu-link menu-select" href="/suggest/">Add new</a>
+        </nav>
+    </header>
+
+    <form class="form" action="/suggest/" method="post">
+        <h4 class="form-status"></h4>
+
+        <fieldset class="form-item">
+            <label class="form-label" for="form-name">Celeb name</label>
+            <input class="form-input" id="form-name" name="name" value="" required>
+        </fieldset>
+
+        <fieldset class="form-item">
+            <label class="form-label" for="form-bio">Short bio</label>
+            <input class="form-input" id="form-bio" name="bio" value="" required>
+        </fieldset>
+
+        <fieldset class="form-item">
+            <label class="form-label" for="form-link">Link to social network</label>
+            <input class="form-input" id="form-link" name="link" value="" required>
+        </fieldset>
+
+        <button type="submit" class="form-button">Suggest</button>
+    </form>
+
+    <script src="/scripts/swiper.min.js"></script>
+    <script src="/scripts/custom.min.js"></script>
+</body>
+</html>

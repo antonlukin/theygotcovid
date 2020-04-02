@@ -1,0 +1,36 @@
+.title {
+  display: block;
+  position: relative;
+
+  max-width: 40rem;
+  margin: 1.5rem 0 0;
+
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 0.875;
+  text-transform: uppercase;
+
+  strong {
+    white-space:nowrap;
+  }
+
+  @media screen and (max-width: 1023px) {
+    font-size: 3.5rem;
+    line-height: 1;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 1rem;
+    font-size: 3rem;
+    line-height: 1.125;
+  }
+
+  @media screen and (max-width: 479px) {
+    font-size: 2rem;
+    line-height: 1.125;
+  }
+
+  @media screen and (max-width: 359px) {
+    font-size: 1.75rem;
+  }
+}
