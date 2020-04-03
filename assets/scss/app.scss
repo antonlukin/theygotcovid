@@ -50,5 +50,10 @@ a {
   outline: none;
 }
 
+::selection {
+  color: $color-background;
+  background: $color-text;
+}
+
 @import "mixins/*.scss";
 @import "layouts/*.scss";

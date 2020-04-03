@@ -2,28 +2,27 @@
     "name": "Vladimir Putin",
     "bio": "President, Russia",
     "link": "https://kremlin.ru",
-    "sex": "male",
+    "button": "Check if she is OK",
     "status": "infected",
     "photo": "/photo/putin.png"
 }, {
     "name": "Vladimir Putin",
     "bio": "President, Russia",
     "link": "https://kremlin.ru",
-    "sex": "male",
+    "button": "Maybe he died?",
     "status": "infected",
     "photo": "/photo/putin.png"
 }, {
     "name": "Vladimir Putin",
     "bio": "President, Russia",
     "link": "https://kremlin.ru",
-    "sex": "male",
     "status": "recovered",
     "photo": "/photo/putin.png"
 }, {
     "name": "Vladimir Putin",
     "bio": "President, Russia",
     "link": "https://kremlin.ru",
-    "sex": "male",
+    "button": "Check if he is OK",
     "status": "recovered",
     "photo": "/photo/putin.png"
 }]

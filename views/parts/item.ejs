@@ -6,7 +6,9 @@
             <h4 class="unit-name"><%= item.name %></h4>
             <p class="unit-bio"><%= item.bio %></p>
 
-            <a class="unit-link" href="<%= item.link %>" target="_blank">Check if he is OK</a>
+            <% if (item.link && item.button) { %>
+                <a class="unit-link" href="<%= item.link %>" target="_blank"><%= item.button %></a>
+            <% } %>
         </div>
 
         <span class="unit-status unit-infected" title="Infected"></span>

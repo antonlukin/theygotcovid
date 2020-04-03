@@ -36,6 +36,7 @@
   .footer-button {
     display: block;
     flex: 0 0 auto;
+    user-select: none;
 
     @media screen and (max-width: 479px) {
       order: 2;

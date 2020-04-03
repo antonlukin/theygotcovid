@@ -7,13 +7,21 @@
     },
 
     slidesPerView: 'auto',
-    spaceBetween: 15,
+    spaceBetween: 12,
+    slidesOffsetAfter: 12,
+    slidesOffsetBefore: 12,
 
     breakpoints: {
+      767: {
+        slidesOffsetAfter: 24,
+        slidesOffsetBefore: 24,
+      },
       1024: {
         slidesPerView: 3,
-        spaceBetween: 25,
-      },
+        spaceBetween: 24,
+        slidesOffsetAfter: 0,
+        slidesOffsetBefore: 0
+      }
     }
   });
 })();

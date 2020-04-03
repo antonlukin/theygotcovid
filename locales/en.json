@@ -10,7 +10,7 @@
     "menu-suggest": "Add a celeb",
 	"form-name": "Celebrity name",
 	"form-bio": "Country and short bio",
-	"form-link": "Link to social network",
+	"form-link": "News source link",
     "form-button": "Suggest",
     "form-wait": "Sending…",
     "form-sent": "Successfully sent",
