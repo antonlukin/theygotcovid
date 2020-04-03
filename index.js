@@ -59,6 +59,12 @@ app.use(express.static(__dirname + '/public', {
 
 
 /**
+ * Set locals static version
+ */
+app.locals.version = require('./package.json').version;
+
+
+/**
  * Redirect to language url
  */
 app.get('/:language(en|ru)?/:path(*)', function (req, res, next) {

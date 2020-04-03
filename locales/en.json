@@ -14,5 +14,10 @@
     "form-button": "Suggest",
     "form-wait": "Sending…",
     "form-sent": "Successfully sent",
-    "form-error": "Error. Try later"
+    "form-error": "Error. Try later",
+    "title-index": "Celebs with COVID-19",
+    "title-recovered": "Recovered / theygotcovid.com",
+    "title-dead": "Dead / theygotcovid.com",
+    "title-suggest": "Suggest new / theygotcovid.com",
+    "title-error": "Page not found / theygotcovid.com"
 }

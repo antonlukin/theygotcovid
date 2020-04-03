@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<%- include('parts/header', {title: 'Dead  / Celebs with COVID-19'}) %>
+<%- include('parts/header', {title: __('title-dead')}) %>
 
 <body>
     <header class="header">
@@ -31,6 +31,6 @@
     <%- include('parts/footer') %>
 
     <script src="/scripts/swiper.min.js"></script>
-    <script src="/scripts/custom.min.js"></script>
+    <script src="/scripts/custom.min.js?v=<%= version %>"></script>
 </body>
 </html>

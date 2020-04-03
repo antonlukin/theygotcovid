@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<%- include('parts/header', {title: 'Page not found / Celebs with COVID-19'}) %>
+<%- include('parts/header', {title: __('title-error')}) %>
 
 <body>
     <header class="header">
@@ -17,8 +17,5 @@
         <h1 class="message-title"><%= __('error-title') %></h1>
         <p class="message-text"><%= __('error-text') %></p>
     </section>
-
-    <script src="/scripts/swiper.min.js"></script>
-    <script src="/scripts/custom.min.js"></script>
 </body>
 </html>

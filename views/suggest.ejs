@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<%- include('parts/header', {title: 'Add new / Celebs with COVID-19'}) %>
+<%- include('parts/header', {title: __('title-suggest')}) %>
 
 <body>
     <header class="header">
@@ -38,8 +38,7 @@
         <button type="submit" class="form-button" id="form-button"><%= __('form-button') %></button>
     </form>
 
-    <script src="/scripts/swiper.min.js"></script>
-    <script src="/scripts/custom.min.js"></script>
+    <script src="/scripts/custom.min.js?v=<%= version %>"></script>
 </body>
 
 </html>

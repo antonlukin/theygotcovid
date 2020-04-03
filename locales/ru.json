@@ -14,5 +14,10 @@
     "form-button": "Предложить",
     "form-wait": "Отправляем…",
     "form-sent": "Успешно отправлено",
-    "form-error": "Ошибка. Попробуйте позже"
+	"form-error": "Ошибка. Попробуйте позже",
+	"title-index": "Знаменитости, заболевшие коронавирусом",
+    "title-recovered": "Вылечились / theygotcovid.com",
+    "title-dead": "Умерли / theygotcovid.com",
+    "title-suggest": "Добавить знаменитость / theygotcovid.com",
+    "title-error": "Страница не найдена / theygotcovid.com"
 }
