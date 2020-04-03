@@ -1,28 +1,64 @@
 [{
-    "name": "Vladimir Putin",
-    "bio": "President, Russia",
+    "title": {
+        "ru": {
+            "name": "Владимир Путин",
+            "bio": "Президент России",
+            "button": "Проверить состояние"
+        },
+        "en": {
+            "name": "Vladimir Putin",
+            "bio": "President, Russia",
+            "button": "Check if he is OK"
+        }
+    },
     "link": "https://kremlin.ru",
-    "button": "Check if she is OK",
     "status": "infected",
     "photo": "/photo/putin.png"
 }, {
-    "name": "Vladimir Putin",
-    "bio": "President, Russia",
-    "link": "https://kremlin.ru",
-    "button": "Maybe he died?",
-    "status": "infected",
+    "title": {
+        "ru": {
+            "name": "Владимир Путин",
+            "bio": "Президент России",
+            "button": "Проверить состояние"
+        },
+        "en": {
+            "name": "Vladimir Putin",
+            "bio": "President, Russia",
+            "button": "Check if he is OK"
+        }
+    },
+    "status": "dead",
     "photo": "/photo/putin.png"
 }, {
-    "name": "Vladimir Putin",
-    "bio": "President, Russia",
+    "title": {
+        "ru": {
+            "name": "Владимир Путин",
+            "bio": "Президент России",
+            "button": "Проверить состояние"
+        },
+        "en": {
+            "name": "Vladimir Putin",
+            "bio": "President, Russia",
+            "button": "Check if he is OK"
+        }
+    },
     "link": "https://kremlin.ru",
     "status": "recovered",
     "photo": "/photo/putin.png"
 }, {
-    "name": "Vladimir Putin",
-    "bio": "President, Russia",
+    "title": {
+        "ru": {
+            "name": "Владимир Путин",
+            "bio": "Президент России",
+            "button": "Проверить состояние"
+        },
+        "en": {
+            "name": "Vladimir Putin",
+            "bio": "President, Russia",
+            "button": "Check if he is OK"
+        }
+    },
     "link": "https://kremlin.ru",
-    "button": "Check if he is OK",
-    "status": "recovered",
+    "status": "infected",
     "photo": "/photo/putin.png"
 }]

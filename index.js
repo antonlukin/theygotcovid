@@ -91,6 +91,12 @@ app.get('/:language(en|ru)?/:path(*)', function (req, res, next) {
  * Handle main page
  */
 app.get('/:language(en|ru)/', function (req, res, next) {
+  let locale = i18n.getLocale(req);
+
+  data.forEach(function (item) {
+    Object.assign(item, item.title[locale]);
+  });
+
   res.render('index', {
     items: data
   });
@@ -103,7 +109,12 @@ app.get('/:language(en|ru)/', function (req, res, next) {
 app.get('/:language(en|ru)/recovered/', function (req, res, next) {
   let items = [];
 
+  // Get locale
+  let locale = i18n.getLocale(req);
+
   data.forEach(function (item) {
+    Object.assign(item, item.title[locale]);
+
     if (item.status === 'recovered') {
       items.push(item);
     }
@@ -121,7 +132,12 @@ app.get('/:language(en|ru)/recovered/', function (req, res, next) {
 app.get('/:language(en|ru)/dead/', function (req, res, next) {
   let items = [];
 
+  // Get locale
+  let locale = i18n.getLocale(req);
+
   data.forEach(function (item) {
+    Object.assign(item, item.title[locale]);
+
     if (item.status === 'dead') {
       items.push(item);
     }

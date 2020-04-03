@@ -59,7 +59,8 @@
 
   .form-button {
     display: block;
-    position: relative;
+    cursor: pointer;
+    user-select: none;
 
     @include scale;
     @include button;

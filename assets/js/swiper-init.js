@@ -1,5 +1,9 @@
 (function() {
-  return new Swiper('.swiper-container', {
+  if (typeof Swiper === 'undefined') {
+    return false;
+  }
+
+  new Swiper('.swiper-container', {
     navigation: {
       nextEl: '.swiper-next',
       prevEl: '.swiper-prev',
