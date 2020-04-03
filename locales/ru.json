@@ -1,0 +1,18 @@
+{
+	"header-title": "Знаменитости, заболевшие коронавирусом",
+	"footer-warning": "Magazines, advertising, catwalk, video clips, instagram stories, social media, product development, campaigns — WE CAN DO IT ALL.",
+	"footer-button": "Берегите себя",
+	"error-title": "Страница не найдена",
+	"error-text": "Воспользуйтесь меню для перехода на главную.",
+	"menu-all": "Заболели",
+	"menu-recovered": "Вылечились",
+	"menu-dead": "Умерли",
+	"menu-suggest": "Добавить",
+	"form-name": "Имя знаменитости",
+	"form-bio": "Страна и короткое описание",
+	"form-link": "Ссылка на социальную сеть",
+    "form-button": "Предложить",
+    "form-wait": "Отправляем…",
+    "form-sent": "Успешно отправлено",
+    "form-error": "Ошибка. Попробуйте позже"
+}

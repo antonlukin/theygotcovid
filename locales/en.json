@@ -1,0 +1,18 @@
+{
+    "header-title": "Celebs with <strong>COVID-19</strong>",
+    "footer-warning": "Magazines, advertising, catwalk, video clips, instagram stories, social media, product development, campaigns — WE CAN DO IT ALL.",
+    "footer-button": "Stay safe",
+    "error-title": "Page not found",
+    "error-text": "Incorrect link. Try to use menu.",
+    "menu-all": "All diagnosed",
+    "menu-recovered": "Recovered",
+    "menu-dead": "Dead",
+    "menu-suggest": "Add a celeb",
+	"form-name": "Celebrity name",
+	"form-bio": "Country and short bio",
+	"form-link": "Link to social network",
+    "form-button": "Suggest",
+    "form-wait": "Sending…",
+    "form-sent": "Successfully sent",
+    "form-error": "Error. Try later"
+}

@@ -9,7 +9,7 @@
     e.preventDefault();
 
     var request = new XMLHttpRequest();
-    request.open('POST', '/suggest/');
+    request.open('POST', '/send/');
     request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     request.setRequestHeader('Content-type', 'application/json');
 

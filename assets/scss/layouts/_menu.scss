@@ -1,19 +1,16 @@
 .menu {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+
   position: relative;
+  max-width: 100%;
 
   .menu-link {
     display: block;
     position: relative;
-    outline: none;
 
-    margin-bottom: 1rem;
     margin-right: 2.5rem;
-    padding-top: 0.25rem;
-
-    font-size: 1rem;
-    line-height: 2.25;
+    line-height: 2.5;
 
     &:after {
       content: '';
@@ -32,30 +29,31 @@
       transition: width 0.5s;
     }
 
-    &:hover:after {
-      opacity: 1;
-      width: 2rem;
-    }
-
     &:focus:after {
       opacity: 1;
       width: 2rem;
     }
 
+    @media (hover: hover) {
+      &:hover:after {
+        opacity: 1;
+        width: 2rem;
+      }
+    }
+
     @media screen and (max-width: 767px) {
       margin-right: 1.75rem;
-      font-size: 0.9375rem;
     }
 
     @media screen and (max-width: 479px) {
-      margin-right: 1.5rem;
-      font-size: 0.8125rem;
+      margin-right: 1.25rem;
     }
 
     @media screen and (max-width: 359px) {
       margin-right: 1rem;
-      font-size: 0.75rem;
     }
+
+    @include scale;
   }
 
   .menu-current {
@@ -66,31 +64,14 @@
   }
 
   .menu-select {
-    margin-right: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    display: block;
+    position: relative;
 
-    color: $color-background;
-    background: $color-text;
+    @include scale;
+    @include button;
 
-    border-radius: 1.5rem;
-    transition: background 0.5s;
-
-    &:hover {
-      background: darken($color-text, 15);
-    }
-
-    &:focus {
-      background: darken($color-text, 15);
-    }
-
-    &:after {
+    @media screen and (max-width: 319px) {
       display: none;
-    }
-
-    @media screen and (max-width: 479px) {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
     }
   }
 }

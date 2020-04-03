@@ -1,0 +1,29 @@
+@mixin button {
+  padding: 0 1rem;
+  line-height: 2.5;
+
+  color: $color-background;
+  background: $color-text;
+
+  border: none;
+  border-radius: 1.5rem;
+  transition: background 0.5s;
+
+  &[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+    background: darken($color-text, 20);
+  }
+
+  &:hover {
+    background: darken($color-text, 15);
+  }
+
+  &:focus {
+    background: darken($color-text, 15);
+  }
+
+  @media screen and (max-width: 479px) {
+    padding: 0 0.75rem;
+  }
+}

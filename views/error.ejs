@@ -5,16 +5,17 @@
 <body>
     <header class="header">
         <nav class="menu">
-            <a class="menu-link" href="/">All diagnosed</a>
-            <a class="menu-link" href="/cured/">Cured</a>
+            <a class="menu-link" href="/"><%= __('menu-all') %></a>
+            <a class="menu-link" href="/recovered/"><%= __('menu-recovered') %></a>
+            <a class="menu-link" href="/dead/"><%= __('menu-dead') %></a>
 
-            <a class="menu-link menu-select" href="/suggest/">Add new</a>
+            <a class="menu-select" href="/suggest/"><%= __('menu-suggest') %></a>
         </nav>
     </header>
 
     <section class="message">
-        <h1 class="message-title">Page not found</h1>
-        <p class="message-text">Incorrect link. Try to use menu.</p>
+        <h1 class="message-title"><%= __('error-title') %></h1>
+        <p class="message-text"><%= __('error-text') %></p>
     </section>
 
     <script src="/scripts/swiper.min.js"></script>

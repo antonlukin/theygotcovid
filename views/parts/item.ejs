@@ -1,12 +1,12 @@
 <article class="swiper-slide">
     <div class="unit">
-        <img class="unit-photo" src="/photo/putin.png" alt="">
+        <img class="unit-photo" src="<%= item.photo %>" alt="">
 
         <div class="unit-content">
-            <h4 class="unit-name">Vladimir Medvedenko</h4>
-            <p class="unit-bio">Musician, Poland</p>
+            <h4 class="unit-name"><%= item.name %></h4>
+            <p class="unit-bio"><%= item.bio %></p>
 
-            <a class="unit-link" href="#" target="_blank">Check if he is OK</a>
+            <a class="unit-link" href="<%= item.link %>" target="_blank">Check if he is OK</a>
         </div>
 
         <span class="unit-status unit-infected" title="Infected"></span>

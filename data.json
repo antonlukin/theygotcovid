@@ -17,13 +17,13 @@
     "bio": "President, Russia",
     "link": "https://kremlin.ru",
     "sex": "male",
-    "status": "infected",
+    "status": "recovered",
     "photo": "/photo/putin.png"
 }, {
     "name": "Vladimir Putin",
     "bio": "President, Russia",
     "link": "https://kremlin.ru",
     "sex": "male",
-    "status": "cured",
+    "status": "recovered",
     "photo": "/photo/putin.png"
 }]

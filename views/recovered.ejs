@@ -5,13 +5,14 @@
 <body>
     <header class="header">
         <nav class="menu">
-            <a class="menu-link" href="/">All diagnosed</a>
-            <a class="menu-link menu-current" href="/cured/">Cured</a>
+            <a class="menu-link" href="/"><%= __('menu-all') %></a>
+            <a class="menu-link menu-current" href="/recovered/"><%= __('menu-recovered') %></a>
+            <a class="menu-link" href="/dead/"><%= __('menu-dead') %></a>
 
-            <a class="menu-link menu-select" href="/suggest/">Add new</a>
+            <a class="menu-select" href="/suggest/"><%= __('menu-suggest') %></a>
         </nav>
 
-        <h1 class="title">Celebs with <strong>COVID-19</strong></h1>
+        <h1 class="title"><%- __('header-title') %></h1>
     </header>
 
     <section class="swiper">

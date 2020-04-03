@@ -3,21 +3,21 @@ $width-site: 64rem;
 $color-text: #d5fe00;
 $color-background: #142437;
 
-$font-regular: "Monument Extended", sans-serif;
+$font-regular: "Oswald", sans-serif;
 
 
 @font-face {
-  font-family: "Monument Extended";
-  src: url("/fonts/monument-extended-regular.woff2") format("woff2"),
-  url("/fonts/monument-extended-regular.woff") format("woff");
+  font-family: "Oswald";
+  src: url("/fonts/Oswald-Medium.woff2") format("woff2"),
+  url("/fonts/Oswald-Medium.woff") format("woff");
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 @font-face {
-  font-family: "Monument Extended";
-  src: url("/fonts/monument-extended-bold.woff2") format("woff2"),
-  url("/fonts/monument-extended-bold.woff") format("woff");
+  font-family: "Oswald";
+  src: url("/fonts/Oswald-Bold.woff2") format("woff2"),
+  url("/fonts/Oswald-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
@@ -38,17 +38,17 @@ body {
   margin: 0;
   padding: 0;
 
-  font: 400 16px/1.5 $font-regular;
+  font: 500 16px/1.5 $font-regular;
 
   color: $color-text;
   background: $color-background;
-
-  -webkit-font-smoothing: antialiased;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  outline: none;
 }
 
+@import "mixins/*.scss";
 @import "layouts/*.scss";
