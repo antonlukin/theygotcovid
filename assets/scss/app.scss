@@ -50,6 +50,11 @@ a {
   outline: none;
 }
 
+button {
+  cursor: pointer;
+  outline: none;
+}
+
 ::selection {
   color: $color-background;
   background: $color-text;
