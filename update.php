@@ -71,14 +71,17 @@ class TheyGotCovid
         $mask = ['name:en', 'name:ru', 'bio:en', 'bio:ru', 'button:en', 'button:ru', 'link', 'status'];
 
         foreach ($mask as $i => $key) {
-            list($name, $locale) = explode(':', $key);
+            $parts = explode(':', $key);
 
-            if ($locale) {
-                $output['title'][$locale][$name] = trim($item[$i]);
+            if (count($parts) < 2) {
+                $output[$key] = trim($item[$i]);
                 continue;
             }
 
-            $output[$name] = trim($item[$i]);
+            list($name, $locale) = $parts;
+
+            // Add title with locale
+            $output['title'][$locale][$name] = trim($item[$i]);
         }
 
         // Update photo
