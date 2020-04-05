@@ -4,7 +4,7 @@
 
   width: $width-site;
   max-width: 100%;
-  margin: 4rem auto;
+  margin: 6rem auto;
   padding: 0 2rem;
 
   .form-item {
@@ -75,7 +75,6 @@
   }
 
   @media screen and (max-width: 479px) {
-    margin: 2rem auto;
     padding: 0 0.75rem;
   }
 }
