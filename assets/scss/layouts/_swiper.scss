@@ -8,8 +8,6 @@
   margin: 2rem auto;
   padding: 0 2rem;
 
-  overflow: hidden;
-
   .swiper-slide {
     width: 20rem;
     max-width: calc(100% - 4rem);
@@ -56,31 +54,61 @@
       background: darken($color-text, 15);
     }
 
+    @media screen and (max-width: 1099px) {
+      background: transparent;
+
+      &:after {
+        border-color: $color-text;
+      }
+    }
+
     @media screen and (max-width: 1023px) {
       display: none;
     }
   }
 
   .swiper-next {
-    right: 0.25rem;
+    right: -2rem;
 
     &:after {
       margin-right: 0.25rem;
       transform: rotate(-45deg);
     }
+
+    @media screen and (max-width: 1099px) {
+      right: -0.5rem;
+      transition: none;
+
+      &:hover {
+        background: transparent;
+      }
+    }
   }
 
   .swiper-prev {
-    left: 0.25rem;
+    left: -2rem;
 
     &:after {
       margin-left: 0.25rem;
       transform: rotate(135deg);
     }
+
+    @media screen and (max-width: 1099px) {
+      left: -0.5rem;
+      transition: none;
+
+      &:hover {
+        background: transparent;
+      }
+    }
   }
 
   .swiper-disabled {
     display: none;
+  }
+
+  @media screen and (max-width: 1099px) {
+    overflow: hidden;
   }
 
   @media screen and (max-width: 1023px) {

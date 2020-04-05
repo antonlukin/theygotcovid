@@ -16,7 +16,7 @@
     slidesOffsetBefore: 12,
 
     breakpoints: {
-      767: {
+      768: {
         slidesOffsetAfter: 24,
         slidesOffsetBefore: 24,
       },

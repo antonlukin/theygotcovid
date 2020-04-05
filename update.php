@@ -64,40 +64,41 @@ class TheyGotCovid
     }
 
     /**
-     * Handle parsed spreadsheet items
+     * Parse titles from item
      */
-    private static function process_items($items)
+    private static function parse_item($item, $output = [])
     {
-        $output = [];
+        $mask = ['name:en', 'name:ru', 'bio:en', 'bio:ru', 'button:en', 'button:ru', 'link', 'status'];
 
-        foreach ($items as $item) {
-            if (empty($item[8])) {
+        foreach ($mask as $i => $key) {
+            list($name, $locale) = explode(':', $key);
+
+            if ($locale) {
+                $output['title'][$locale][$name] = trim($item[$i]);
                 continue;
             }
 
-            $title = [
-                'en' => [
-                    'name' => trim($item[0]),
-                    'bio' => trim($item[2]),
-                    'button' => trim($item[4]),
-                ],
+            $output[$name] = trim($item[$i]);
+        }
 
-                'ru' => [
-                    'name' => trim($item[1]),
-                    'bio' => trim($item[3]),
-                    'button' => trim($item[5]),
-                ],
-            ];
+        // Update photo
+        $output['photo'] = self::update_photo($item[8]);
 
-            $value = [
-                'link' => trim($item[6]),
-                'status' => trim($item[7]),
-            ];
+        // Update status to lowercase
+        $output['status'] = strtolower($output['status']);
 
-            $value['photo'] = self::update_photo($item[8]);
-            $value['title'] = $title;
+        return $output;
+    }
 
-            $output[] = $value;
+    /**
+     * Handle parsed spreadsheet items
+     */
+    private static function process_items($items, $output = [])
+    {
+        foreach ($items as $item) {
+            if (!empty($item[8])) {
+                $output[] = self::parse_item($item);
+            }
         }
 
         return $output;
