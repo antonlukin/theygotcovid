@@ -1,6 +1,6 @@
 <article class="swiper-slide">
     <div class="unit">
-        <img class="unit-photo" src="<%= item.photo %>" alt="<%= item.name %>" loading="lazy">
+        <img class="unit-photo" src="<%= item.photo.image %>" alt="<%= item.name %>" loading="lazy" width="<%= item.photo.width %>" height="<%= item.photo.height %>">
 
         <div class="unit-content">
             <h4 class="unit-name"><%= item.name %></h4>

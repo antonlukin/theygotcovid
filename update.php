@@ -11,7 +11,6 @@ require_once __DIR__ . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-
 class TheyGotCovid
 {
     /**
@@ -57,24 +56,28 @@ class TheyGotCovid
     /**
      * Download and update item photo
      */
-    private static function update_photo($photo)
+    private static function update_photo($uri)
     {
-        $file = md5($photo) . ".jpg";
+        $file = md5($uri) . ".jpg";
 
         // Get photo file path
         $path = __DIR__ . "/public/photo/{$file}";
 
         if (!file_exists($path)) {
-            $image = @file_get_contents($photo);
+            $image = @file_get_contents($uri);
 
             if (!$image) {
-                self::show_error('Unable to download photo: ' . $photo);
+                self::show_error('Unable to download photo: ' . $uri);
             }
 
             self::compress_photo($path, $image);
         }
 
-        return "/photo/{$file}";
+        // Get image size
+        $size = getimagesize($path);
+
+        // Create photo data
+        return ['image' => "/photo/{$file}", 'width' => $size[0], 'height' => $size[1]];
     }
 
     /**
