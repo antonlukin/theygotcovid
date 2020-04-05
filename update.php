@@ -41,6 +41,20 @@ class TheyGotCovid
     }
 
     /**
+     * Compress and scale photo
+     */
+    private static function compress_photo($path, $image)
+    {
+        $file = imagecreatefromstring($image);
+
+        // Scale image
+        $copy = imagescale($file, 600);
+
+        // Save image using path
+        imagejpeg($copy, $path, 80);
+    }
+
+    /**
      * Download and update item photo
      */
     private static function update_photo($photo)
@@ -57,7 +71,7 @@ class TheyGotCovid
                 self::show_error('Unable to download photo: ' . $photo);
             }
 
-            file_put_contents($path, $image);
+            self::compress_photo($path, $image);
         }
 
         return "/photo/{$file}";
