@@ -54,7 +54,9 @@ class TheyGotCovid
         $copy = imagescale($file, 600);
 
         // Save image using path
-        imagejpeg($copy, $path, 80);
+        if (!imagejpeg($copy, $path, 80)) {
+            self::halt_app('Unable to save parsed photo: ' . $photo);
+        }
     }
 
     /**
