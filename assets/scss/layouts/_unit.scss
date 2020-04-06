@@ -155,8 +155,10 @@
       color: darken($color-background, 15);
     }
 
-    &:hover:after {
-      display: block;
+    @media (hover: hover) {
+      &:hover:after {
+        display: block;
+      }
     }
 
     &.unit-infected {
