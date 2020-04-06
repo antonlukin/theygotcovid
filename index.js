@@ -17,7 +17,7 @@ require('dotenv').config()
 /**
  * Load units data
  */
-let data = require('./data.json');
+let data = require('./config/data.json');
 
 /**
  * Set request parser

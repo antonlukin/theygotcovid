@@ -5,6 +5,7 @@
  * @author Anton Lukin
  */
 
+
 require_once __DIR__ . '/vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
@@ -15,8 +16,12 @@ class TheyGotCovid
     /**
      * Show error message
      */
-    private static function show_error($message = '')
+    private static function halt_app($message = '', $success = false)
     {
+        if ($success === false) {
+            $message = "Error: {$message}";
+        }
+
         exit($message);
     }
 
@@ -66,7 +71,7 @@ class TheyGotCovid
             $image = @file_get_contents($uri);
 
             if (!$image) {
-                self::show_error('Unable to download photo: ' . $uri);
+                self::halt_app('Unable to download photo: ' . $uri);
             }
 
             self::compress_photo($path, $image);
@@ -131,7 +136,7 @@ class TheyGotCovid
         $spreadsheet = getenv('SHEET_ID');
 
         if (empty($spreadsheet)) {
-            self::show_error('Google spreadsheet id is empty');
+            self::halt_app('Google spreadsheet id is empty');
         }
 
         $service = self::get_service();
@@ -140,23 +145,28 @@ class TheyGotCovid
             $response = $service->spreadsheets_values->get($spreadsheet, 'A2:I');
 
             if (empty($response->values)) {
-                self::show_error('Spreadsheet empty values');
+                self::halt_app('Spreadsheet empty values');
             }
 
             $items = self::process_items($response->values);
 
         } catch (Exception $e) {
-            self::show_error($e->getMessage());
+            self::halt_app($e->getMessage());
         }
 
         if (empty($items)) {
-            self::show_error('Something wrong with parsed data');
+            self::halt_app('Something wrong with parsed data');
         }
 
         $output = json_encode($items, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 
         // Save data to file
-        file_put_contents(__DIR__ . '/data.json', $output);
+        if(!file_put_contents(__DIR__ . '/config/data.json', $output)) {
+            self::halt_app('Unable to save data.json file');
+        }
+
+        // Show halt message
+        self::halt_app('Successfully parsed', true);
     }
 }
 

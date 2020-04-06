@@ -2,5 +2,4 @@
 node_modules/
 vendor/
 config/
-data.json
 public/photo/
