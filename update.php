@@ -91,7 +91,10 @@ class TheyGotCovid
      */
     private static function parse_item($item, $output = [])
     {
-        $mask = ['name:en', 'name:ru', 'bio:en', 'bio:ru', 'button:en', 'button:ru', 'link', 'status'];
+        $title = ['name:en', 'name:ru', 'bio:en', 'bio:ru', 'button:en', 'button:ru', 'help:en', 'help:ru'];
+
+        // Merge additional parameters
+        $mask = array_merge($title, ['status', 'link']);
 
         foreach ($mask as $i => $key) {
             $parts = explode(':', $key);
@@ -108,7 +111,7 @@ class TheyGotCovid
         }
 
         // Update photo
-        $output['photo'] = self::update_photo($item[8]);
+        $output['photo'] = self::update_photo($item[10]);
 
         // Update status to lowercase
         $output['status'] = strtolower($output['status']);
@@ -122,7 +125,7 @@ class TheyGotCovid
     private static function process_items($items, $output = [])
     {
         foreach ($items as $item) {
-            if (!empty($item[8])) {
+            if (!empty($item[10])) {
                 $output[] = self::parse_item($item);
             }
         }
@@ -144,7 +147,7 @@ class TheyGotCovid
         $service = self::get_service();
 
         try {
-            $response = $service->spreadsheets_values->get($spreadsheet, 'A2:I');
+            $response = $service->spreadsheets_values->get($spreadsheet, 'A2:K');
 
             if (empty($response->values)) {
                 self::halt_app('Spreadsheet empty values');

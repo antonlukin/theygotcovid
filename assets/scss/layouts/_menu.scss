@@ -7,6 +7,8 @@
   max-width: 100%;
 
   .menu-link {
+    @include scale;
+
     display: block;
     position: relative;
 
@@ -53,8 +55,6 @@
     @media screen and (max-width: 359px) {
       margin-right: 1rem;
     }
-
-    @include scale;
   }
 
   .menu-current {
@@ -65,10 +65,10 @@
   }
 
   .menu-select {
-    display: block;
-
     @include scale;
     @include button;
+
+    display: block;
 
     @media screen and (max-width: 319px) {
       display: none;

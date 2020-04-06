@@ -176,7 +176,8 @@ app.post('/send/', function (req, res, next) {
 
   // Send data to Telegram
   bot.telegram.sendMessage(process.env.GROUP, message.join('\n'), {
-    parse_mode: 'HTML'
+    parse_mode: 'HTML',
+    disable_web_page_preview: true
   });
 
   // Return message to client

@@ -129,7 +129,8 @@
   }
 
   .unit-status {
-    display: block;
+    display: flex;
+    align-items: center;
     position: absolute;
 
     z-index: 2;
@@ -138,19 +139,36 @@
     top: 0.875rem;
     left: 0.875rem;
 
-    width: 1.5rem;
+    min-width: 1.5rem;
     height: 1.5rem;
 
-    border-radius: 50%;
+    border-radius: 1.5rem;
+
+    &:after {
+      content: attr(data-help);
+
+      display: none;
+      padding: 0 1rem;
+
+      font-size: 0.75rem;
+      font-family: $font-default;
+      text-transform: capitalize;
+
+      color: darken($color-background, 15);
+    }
+
+    &:hover:after {
+      display: block;
+    }
 
     &.unit-infected {
       background: $status-infected;
-      box-shadow: 0 0 1.5rem 0.25rem $status-infected;
+      box-shadow: 0 0 1rem $status-infected;
     }
 
     &.unit-recovered {
       background: $status-recovered;
-      box-shadow: 0 0 1.5rem 0.25rem $status-recovered;
+      box-shadow: 0 0 1rem $status-recovered;
     }
 
     &.unit-dead {
@@ -160,7 +178,11 @@
       background-repeat: no-repeat;
       background-position: center;
 
-      box-shadow: 0 0 1.5rem 0.25rem $color-text;
+      box-shadow: 0 0 1rem $color-text;
+
+      &:hover {
+        background-image: none;
+      }
     }
   }
 }

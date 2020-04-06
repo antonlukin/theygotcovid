@@ -19,5 +19,6 @@
     "title-recovered": "Вылечились / theygotcovid.com",
     "title-dead": "Умерли / theygotcovid.com",
     "title-suggest": "Добавить знаменитость / theygotcovid.com",
-    "title-error": "Страница не найдена / theygotcovid.com"
+	"title-error": "Страница не найдена / theygotcovid.com",
+	"header-description": "Эти знаменитости заразились коронавирусом. Узнайте об их состоянии."
 }
