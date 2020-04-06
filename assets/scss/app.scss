@@ -52,6 +52,9 @@ a {
   color: inherit;
   text-decoration: none;
   outline: none;
+
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 button {
