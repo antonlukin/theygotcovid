@@ -10,7 +10,7 @@
   margin: 2rem auto;
   padding: 0 2rem;
 
-  .footer-warning {
+  .footer-about {
     flex: 0 1 100%;
     cursor: default;
     user-select: none;
@@ -22,12 +22,31 @@
 
     text-transform: uppercase;
 
-    @media screen and (max-width: 767px) {
-      flex: 1 1 100%;
+    a {
+      border-bottom: solid 1px;
+      transition: border 0.25s;
 
-      margin: 1rem 0;
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+
+    span {
+      display: block;
+
+      @media screen and (max-width: 767px) {
+        display: inline;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
       font-size: 0.75rem;
       line-height: 1.5;
+    }
+
+    @media screen and (max-width: 479px) {
+      flex: 1 1 100%;
+      margin: 1rem 0;
     }
   }
 
@@ -52,7 +71,6 @@
     border-radius: 2rem;
     transition: background 0.5s;
 
-
     &:hover {
       background: darken($color-text, 15);
     }
@@ -66,23 +84,23 @@
     }
 
     @media screen and (max-width: 767px) {
-      order: 2;
       font-size: 1.125rem;
     }
 
     @media screen and (max-width: 479px) {
+      order: 2;
       padding: 0 1rem;
       font-size: 1rem;
     }
   }
 
   @media screen and (max-width: 767px) {
-    flex-flow: row wrap;
     margin: 1.5rem auto;
     padding: 0 1rem;
   }
 
   @media screen and (max-width: 479px) {
+    flex-flow: row wrap;
     margin: 1rem auto;
     padding: 0 0.75rem;
   }
