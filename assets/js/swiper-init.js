@@ -16,6 +16,10 @@
     slidesOffsetBefore: 12,
 
     breakpoints: {
+      480: {
+        slidesOffsetAfter: 16,
+        slidesOffsetBefore: 16,
+      },
       768: {
         slidesOffsetAfter: 24,
         slidesOffsetBefore: 24,
@@ -24,7 +28,7 @@
         slidesPerView: 3,
         spaceBetween: 24,
         slidesOffsetAfter: 0,
-        slidesOffsetBefore: 0
+        slidesOffsetBefore: 0,
       }
     }
   });

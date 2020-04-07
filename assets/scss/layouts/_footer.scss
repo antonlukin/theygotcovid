@@ -1,8 +1,6 @@
 .footer {
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-
+  flex-flow: row wrap;
   position: relative;
 
   width: $width-site;
@@ -10,97 +8,12 @@
   margin: 2rem auto;
   padding: 0 2rem;
 
-  .footer-about {
-    flex: 0 1 100%;
-    cursor: default;
-    user-select: none;
-
-    margin: 1rem 2rem;
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.25;
-
-    text-transform: uppercase;
-
-    a {
-      border-bottom: solid 1px;
-      transition: border 0.25s;
-
-      &:hover {
-        border-bottom-color: transparent;
-      }
-    }
-
-    span {
-      display: block;
-
-      @media screen and (max-width: 767px) {
-        display: inline;
-      }
-    }
-
-    @media screen and (max-width: 767px) {
-      font-size: 0.75rem;
-      line-height: 1.5;
-    }
-
-    @media screen and (max-width: 479px) {
-      flex: 1 1 100%;
-      margin: 1rem 0;
-    }
-  }
-
-  .footer-button {
-    display: block;
-    flex: 0 0 auto;
-    user-select: none;
-
-    padding: 0 1.5rem;
-    line-height: 2.5;
-
-    font-size: 1.375rem;
-    font-weight: 500;
-    font-family: $font-regular;
-
-    text-transform: uppercase;
-
-    color: $color-background;
-    background: $color-text;
-
-    border: none;
-    border-radius: 2rem;
-    transition: background 0.5s;
-
-    &:hover {
-      background: darken($color-text, 15);
-    }
-
-    &:focus {
-      background: darken($color-text, 15);
-    }
-
-    @media screen and (max-width: 1023px) {
-      font-size: 1.25rem;
-    }
-
-    @media screen and (max-width: 767px) {
-      font-size: 1.125rem;
-    }
-
-    @media screen and (max-width: 479px) {
-      order: 2;
-      padding: 0 1rem;
-      font-size: 1rem;
-    }
-  }
-
   @media screen and (max-width: 767px) {
     margin: 1.5rem auto;
     padding: 0 1rem;
   }
 
   @media screen and (max-width: 479px) {
-    flex-flow: row wrap;
     margin: 1rem auto;
     padding: 0 0.75rem;
   }

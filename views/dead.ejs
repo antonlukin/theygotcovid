@@ -12,6 +12,8 @@
             <a class="menu-link menu-select" href="/<%= locale %>/suggest/"><%= __('menu-suggest') %></a>
         </nav>
 
+        <%- include('parts/share') %>
+
         <h1 class="title"><%- __('header-title') %></h1>
     </header>
 
@@ -28,7 +30,11 @@
         <div class="swiper-button swiper-prev"></div>
     </section>
 
-    <%- include('parts/footer') %>
+    <footer class="footer">
+        <%- include('parts/about') %>
+
+        <%- include('parts/share') %>
+    </footer>
 
     <script src="/scripts/swiper.min.js"></script>
     <script src="/scripts/custom.min.js?v=<%= version %>"></script>

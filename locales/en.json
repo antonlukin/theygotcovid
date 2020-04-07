@@ -1,8 +1,8 @@
 {
     "header-title": "Celebs with <strong>COVID-19</strong>",
-    "footer-about": "<span>Magazines, advertising, catwalk, video clips, instagram stories,</span> social media, product development, campaigns — <a href=\"mailto:misha@knife.media\">WE CAN DO IT ALL</a>.",
-    "footer-button": "Stay safe",
-    "footer-link": "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html",
+    "about-copy": "<span>Magazines, advertising, catwalk, instagram stories,</span> social media, product development — <a href=\"mailto:misha@knife.media\">WE CAN DO IT ALL</a>.",
+    "about-button": "Stay safe",
+    "about-link": "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html",
     "error-title": "Page not found",
     "error-text": "Incorrect link. Try to use menu.",
     "menu-all": "All diagnosed",

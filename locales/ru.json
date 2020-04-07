@@ -1,8 +1,8 @@
 {
 	"header-title": "Знаменитости, заболевшие коронавирусом",
-	"footer-about": "<span>Мы умеем делать медиа, сайты, спецпроекты,</span> вести соцсети и пиар-кампании. <a href=\"mailto:misha@knife.media\">Обращайтесь.</a>",
-	"footer-button": "Берегите себя",
-	"footer-link": "https://www.rospotrebnadzor.ru/about/info/news_time/news_details.php?ELEMENT_ID=13566",
+	"about-copy": "<span>Мы умеем делать медиа, сайты, спецпроекты,</span> вести соцсети и пиар-кампании. <a href=\"mailto:misha@knife.media\">Обращайтесь.</a>",
+	"about-button": "Берегите себя",
+	"about-link": "https://www.rospotrebnadzor.ru/about/info/news_time/news_details.php?ELEMENT_ID=13566",
 	"error-title": "Страница не найдена",
 	"error-text": "Воспользуйтесь меню для перехода на главную.",
 	"menu-all": "Заболели",
