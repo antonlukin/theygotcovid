@@ -30,16 +30,6 @@ app.use(cookieParser());
 
 
 /**
- * Set cookie based csrf protection
- */
-app.use(csrf({
-  cookie: {
-    key: 'token'
-  }
-}));
-
-
-/**
  * Remove trailing slash
  */
 app.use(trailing());
@@ -78,17 +68,26 @@ app.use(express.static(__dirname + '/public', {
 app.locals.version = require('./package.json').version;
 
 
+
+/**
+ * Set cookie based csrf protection
+ */
+app.use(csrf({
+  cookie: {
+    key: 'token'
+  }
+}));
+
+
 /**
  * Custom CSRF error
  */
 app.use(function (err, req, res, next) {
-  if (err.code !== 'EBADCSRFTOKEN') {
-    return next(err);
+  if (err.code === 'EBADCSRFTOKEN') {
+    return res.sendStatus(403);
   }
 
-  res.json({
-    success: false
-  });
+  next(err);
 });
 
 

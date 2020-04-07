@@ -17,7 +17,7 @@
     // Set button status
     var button = form.querySelector('.form-button');
     button.setAttribute('disabled', 'disabled');
-    button.textContent = 'Sending…';
+    button.textContent = document.getElementById('form-wait').textContent;
 
     var fields = {};
 
@@ -26,13 +26,13 @@
         var response = JSON.parse(request.responseText);
 
         if (response.success) {
-          button.textContent = 'Successfully sent';
+          button.textContent = document.getElementById('form-sent').textContent;
 
           return form.reset();
         }
       }
 
-      button.textContent = 'Error. Try later';
+      button.textContent = document.getElementById('form-error').textContent;
     }
 
     var formData = new FormData(form);
