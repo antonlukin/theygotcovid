@@ -12,6 +12,14 @@ $font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ub
 
 @font-face {
   font-family: "Oswald";
+  src: url("/fonts/Oswald-Regular.woff2") format("woff2"),
+  url("/fonts/Oswald-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Oswald";
   src: url("/fonts/Oswald-Medium.woff2") format("woff2"),
   url("/fonts/Oswald-Medium.woff") format("woff");
   font-style: normal;

@@ -4,8 +4,32 @@
 
   width: $width-site;
   max-width: 100%;
-  margin: 6rem auto;
+  margin: 3rem auto;
   padding: 0 2rem;
+
+  .form-title {
+    display: block;
+    user-select: none;
+
+    max-width: 40rem;
+    margin: 0 0 2rem;
+    line-height: 1.25;
+
+    font-size: 1.375rem;
+    font-weight: 400;
+
+    @media screen and (max-width: 1023px) {
+      font-size: 1.25rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.125rem;
+    }
+
+    @media screen and (max-width: 479px) {
+      font-size: 1rem;
+    }
+  }
 
   .form-item {
     display: block;
@@ -24,47 +48,108 @@
     }
 
     @media screen and (max-width: 479px) {
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
     }
   }
 
   .form-label {
-    @include scale;
-
     display: block;
     position: relative;
+    user-select: none;
 
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
+
+    font-size: 0.875rem;
+    font-family: $font-regular;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 0.25rem;
+      font-size: 0.8125rem;
+    }
+
+    @media screen and (max-width: 479px) {
+      font-size: 0.75rem;
+    }
   }
 
   .form-input {
-    @include scale;
-
     display: block;
     outline: none;
 
     width: 100%;
-    padding: 0.75rem 1rem;
-    text-transform: none;
+    padding: 0.5rem 0.75rem;
+    line-height: 1;
 
-    color: $color-text;
-    background: darken($color-background, 5);
+    font-family: $font-regular;
+    font-size: 1.375rem;
 
-    border: solid 1.5px darken($color-background, 20);
+    color: $color-background;
+    background: $color-text;
+
+    border: solid 1.5px darken($color-background, 5);
     border-radius: 0.25rem;
 
+    @media screen and (max-width: 1023px) {
+      font-size: 1.25rem;
+      line-height: 1.25;
+    }
+
     @media screen and (max-width: 767px) {
-      padding: 0.5rem 0.75rem;
+      font-size: 1.125rem;
+    }
+
+    @media screen and (max-width: 479px) {
+      font-size: 1rem;
     }
   }
 
   .form-button {
-    @include scale;
-    @include button;
-
     display: block;
     user-select: none;
+
+    padding: 0 1.5rem;
+    line-height: 2.5;
+
+    font-size: 1.375rem;
+    font-weight: 500;
+    font-family: $font-regular;
+
+    text-transform: uppercase;
+
+    color: $color-background;
+    background: $color-text;
+
+    border: none;
+    border-radius: 2rem;
+    transition: background 0.5s;
+
+    &[disabled] {
+      cursor: not-allowed;
+      pointer-events: none;
+      background: darken($color-text, 20);
+    }
+
+    &:hover {
+      background: darken($color-text, 15);
+    }
+
+    &:focus {
+      background: darken($color-text, 15);
+    }
+
+    @media screen and (max-width: 1023px) {
+      font-size: 1.25rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.125rem;
+    }
+
+    @media screen and (max-width: 479px) {
+      padding: 0 1rem;
+      font-size: 1rem;
+    }
   }
 
   .form-status {
@@ -72,7 +157,7 @@
   }
 
   @media screen and (max-width: 767px) {
-    margin: 4rem auto;
+    margin: 2rem auto;
     padding: 0 1rem;
   }
 
