@@ -129,6 +129,10 @@
     &:focus {
       color: $color-background;
       background: $color-text;
+
+       svg {
+        fill: $color-background;
+       }
     }
 
     @media screen and (max-width: 767px) {
