@@ -1,9 +1,11 @@
 const express = require('express');
 const path = require('path');
+const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser');
 const Telegraf = require('telegraf');
 const trailing = require('express-trailing-slash');
 const i18n = require('i18n');
+const csrf = require('csurf');
 
 const app = express();
 
@@ -19,10 +21,22 @@ require('dotenv').config()
  */
 let data = require('./config/data.json');
 
+
 /**
  * Set request parser
  */
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(cookieParser());
+
+
+/**
+ * Set cookie based csrf protection
+ */
+app.use(csrf({
+  cookie: {
+    key: 'token'
+  }
+}));
 
 
 /**
@@ -62,6 +76,20 @@ app.use(express.static(__dirname + '/public', {
  * Set locals static version
  */
 app.locals.version = require('./package.json').version;
+
+
+/**
+ * Custom CSRF error
+ */
+app.use(function (err, req, res, next) {
+  if (err.code !== 'EBADCSRFTOKEN') {
+    return next(err);
+  }
+
+  res.json({
+    success: false
+  });
+});
 
 
 /**
@@ -153,7 +181,9 @@ app.get('/:language(en|ru)/dead/', function (req, res, next) {
  * Handle suggest page
  */
 app.get('/:language(en|ru)/suggest/', function (req, res, next) {
-  res.render('suggest');
+  res.render('suggest', {
+    token: req.csrfToken()
+  });
 });
 
 
@@ -163,8 +193,11 @@ app.get('/:language(en|ru)/suggest/', function (req, res, next) {
 app.post('/send/', function (req, res, next) {
   const bot = new Telegraf(process.env.TOKEN);
 
-  if (!req.xhr || Object.keys(req.body).length < 3) {
-    res.json({ success: false });
+  // Check request length
+  if (Object.keys(req.body).length < 3) {
+    res.json({
+      success: false
+    });
   }
 
   let message = [];
@@ -181,7 +214,9 @@ app.post('/send/', function (req, res, next) {
   });
 
   // Return message to client
-  res.json({ success: true });
+  res.json({
+    success: true
+  });
 });
 
 

@@ -12,6 +12,7 @@
     request.open('POST', '/send/');
     request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     request.setRequestHeader('Content-type', 'application/json');
+    request.setRequestHeader('CSRF-Token', form.getAttribute('data-token'));
 
     // Set button status
     var button = form.querySelector('.form-button');
