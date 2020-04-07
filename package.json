@@ -1,5 +1,5 @@
 {
-  "version": "1.0.15",
+  "version": "1.0.16",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -11,6 +11,7 @@
     "express": "~4.17.1",
     "express-trailing-slash": "^1.0.0",
     "i18n": "^0.8.6",
+    "slug": "^2.1.1",
     "telegraf": "^3.37.0"
   },
   "devDependencies": {

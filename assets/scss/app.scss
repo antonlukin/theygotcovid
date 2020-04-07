@@ -3,7 +3,8 @@ $width-site: 64rem;
 $color-text: #d5fe00;
 $color-background: #142437;
 
-$status-infected: #ff0078;
+$status-dead: #ff0078;
+$status-infected: #ff5e00;
 $status-recovered: #05fc89;
 
 $font-regular: "Oswald", sans-serif;
@@ -74,5 +75,4 @@ button {
   background: $color-text;
 }
 
-@import "mixins/*.scss";
 @import "layouts/*.scss";

@@ -1,5 +1,6 @@
 .header {
-  display: block;
+  display: flex;
+  flex-flow: row wrap;
   position: relative;
 
   width: $width-site;

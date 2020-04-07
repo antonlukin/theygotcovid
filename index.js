@@ -6,6 +6,7 @@ const Telegraf = require('telegraf');
 const trailing = require('express-trailing-slash');
 const i18n = require('i18n');
 const csrf = require('csurf');
+const slug = require('slug');
 
 const app = express();
 
@@ -63,11 +64,13 @@ app.use(express.static(__dirname + '/public', {
 
 
 /**
- * Set locals static version
+ * Set locals static variables
  */
 app.locals.version = require('./package.json').version;
 
-
+app.locals.slug = function(title) {
+  return slug(title, {lower: true});
+}
 
 /**
  * Set cookie based csrf protection
@@ -223,9 +226,7 @@ app.post('/send/', function (req, res, next) {
  * Error handler
  */
 app.use(function (req, res, next) {
-  res.status(404).render('error', {
-    language: app.locals.language
-  });
+  res.status(404).render('error');
 });
 
 /**
