@@ -200,4 +200,8 @@
       }
     }
   }
+
+  .swiper-slide:first-child & .unit-status::after {
+    display: block;
+  }
 }
