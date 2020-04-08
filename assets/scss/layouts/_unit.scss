@@ -170,10 +170,8 @@
       height: calc(100% + 1rem);
     }
 
-    @media (hover: hover) {
-      &:hover:after {
-        display: block;
-      }
+    &.unit-expand::after {
+      display: block;
     }
 
     &.unit-infected {
