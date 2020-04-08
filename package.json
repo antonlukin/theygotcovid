@@ -1,5 +1,5 @@
 {
-  "version": "1.0.23",
+  "version": "1.0.24",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -14,6 +14,15 @@
     "slug": "^2.1.1",
     "telegraf": "^3.37.0"
   },
+  "browserslist": [
+    "ie >= 10",
+    "ff >= 30",
+    "chrome >= 34",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4.4"
+  ],
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
