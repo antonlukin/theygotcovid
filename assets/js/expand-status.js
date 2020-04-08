@@ -9,6 +9,11 @@
   }
 
   for (var i = 0; i < status.length; i++) {
+    // Add class to first element
+    if (i === 0) {
+      status[i].classList.add('unit-expand');
+    }
+
     status[i].addEventListener('click', function (e) {
       e.preventDefault();
 

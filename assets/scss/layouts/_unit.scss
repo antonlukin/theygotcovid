@@ -170,18 +170,10 @@
       height: calc(100% + 1rem);
     }
 
-    &.unit-expand::after {
-      display: block;
-    }
-
     &.unit-infected {
       background: $status-infected;
       box-shadow: 0 0 1rem $status-infected;
       animation: pulse 0.75s infinite;
-
-      &:hover {
-        animation: none;
-      }
     }
 
     &.unit-recovered {
@@ -192,14 +184,14 @@
     &.unit-dead {
       background: $status-dead;
       box-shadow: 0 0 1rem $status-dead;
-
-      &:hover {
-        background-image: none;
-      }
     }
-  }
 
-  .swiper-slide:first-child & .unit-status::after {
-    display: block;
+    &.unit-expand {
+      animation: none;
+    }
+
+    &.unit-expand::after {
+      display: block;
+    }
   }
 }
