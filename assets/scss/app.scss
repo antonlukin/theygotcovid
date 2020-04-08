@@ -75,4 +75,13 @@ button {
   background: $color-text;
 }
 
+@keyframes pulse {
+  0% {
+      transform: scale(1.15)
+  }
+  50% {
+      transform: scale(1)
+  }
+}
+
 @import "layouts/*.scss";

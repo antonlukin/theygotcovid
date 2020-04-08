@@ -115,6 +115,10 @@
       background: lighten($color-background, 5);
     }
 
+    &:focus {
+      background: lighten($color-background, 5);
+    }
+
     @media screen and (max-width: 767px) {
       font-size: 0.9375rem;
     }
@@ -175,6 +179,11 @@
     &.unit-infected {
       background: $status-infected;
       box-shadow: 0 0 1rem $status-infected;
+      animation: pulse 0.75s infinite;
+
+      &:hover {
+        animation: none;
+      }
     }
 
     &.unit-recovered {
