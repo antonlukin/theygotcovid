@@ -9,6 +9,9 @@
   padding: 0 2rem;
 
   .swiper-slide {
+    display: flex;
+    flex-flow: column wrap;
+
     width: 20rem;
     max-width: calc(100% - 4rem);
 
