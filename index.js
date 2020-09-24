@@ -190,39 +190,6 @@ app.get('/:language(en|ru)/suggest/', function (req, res, next) {
 
 
 /**
- * Handle form posting
- */
-app.post('/send/', function (req, res, next) {
-  const bot = new Telegraf(process.env.TOKEN);
-
-  // Check request length
-  if (Object.keys(req.body).length < 3) {
-    res.json({
-      success: false
-    });
-  }
-
-  let message = [];
-
-  // Add values to message
-  message.push(`<b>Name:</b> ${req.body.name}`);
-  message.push(`<b>Bio:</b> ${req.body.bio}`);
-  message.push(`<b>Link:</b> ${req.body.link}`);
-
-  // Send data to Telegram
-  bot.telegram.sendMessage(process.env.GROUP, message.join('\n'), {
-    parse_mode: 'HTML',
-    disable_web_page_preview: true
-  });
-
-  // Return message to client
-  res.json({
-    success: true
-  });
-});
-
-
-/**
  * Error handler
  */
 app.use(function (req, res, next) {

@@ -13,29 +13,8 @@
         </nav>
     </header>
 
-    <form class="form" method="post" action="/" data-token="<%= token %>">
-        <h4 class="form-title"><%= __('form-title') %></h4>
-
-        <fieldset class="form-item">
-            <label class="form-label" for="form-name"><%= __('form-name') %></label>
-            <input class="form-input" id="form-name" name="name" value="" required>
-        </fieldset>
-
-        <fieldset class="form-item">
-            <label class="form-label" for="form-bio"><%= __('form-bio') %></label>
-            <input class="form-input" id="form-bio" name="bio" value="" required>
-        </fieldset>
-
-        <fieldset class="form-item">
-            <label class="form-label" for="form-link"><%= __('form-link') %></label>
-            <input class="form-input" id="form-link" name="link" value="" required>
-        </fieldset>
-
-        <span class="form-status" id="form-wait"><%= __('form-wait') %></span>
-        <span class="form-status" id="form-sent"><%= __('form-sent') %></span>
-        <span class="form-status" id="form-error"><%= __('form-error') %></span>
-
-        <button type="submit" class="form-button" id="form-button"><%= __('form-button') %></button>
+    <form class="form">
+        <h4 class="form-title"><%= __('form-closed') %></h4>
     </form>
 
     <script src="/scripts/custom.min.js?v=<%= version %>"></script>
